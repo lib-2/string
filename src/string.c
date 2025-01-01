@@ -1,12 +1,12 @@
 #define G_THIS
-#include "-2_string.h"
+#include "-2/string.h"
 #undef G_THIS
 
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include "-0_debug.h"
+#include "-0_debug_types.h"
 
 #define G_THIS
 #include "-0_common.h"
