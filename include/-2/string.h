@@ -15,6 +15,6 @@ G_EXPORT g_0_err_t g_2_string_duplicate(
     g_2_string_t *out);
 
 G_EXPORT void
-g_2_string_dispose(G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE g_2_string_t str);
+g_2_string_dispose(G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE g_2_string_t *str);
 
 #endif

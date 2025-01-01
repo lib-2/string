@@ -38,8 +38,8 @@ G_EXPORT g_0_err_t g_2_string_duplicate(G_P const g_2_string_t str,
   return false;
 }
 
-G_EXPORT void g_2_string_dispose(G_P g_2_string_t str) {
+G_EXPORT void g_2_string_dispose(G_P g_2_string_t *str) {
   G_B;
 
-  free(str.c_str);
+  free(str->c_str);
 }
