@@ -1,8 +1,8 @@
 #ifndef G_2_STRING_H
 #define G_2_STRING_H
 
+#include "-0/debug_types.h"
 #include "-0_common.h"
-#include "-0_debug_types.h"
 #include "-0_types.h"
 
 #include "string_types.h"
