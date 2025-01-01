@@ -7,6 +7,7 @@
 #include <string.h>
 
 #include "-0/debug_shortcut.h"
+#include "-0_types.h"
 
 #define G_THIS
 #include "-0_common.h"
