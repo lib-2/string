@@ -50,9 +50,15 @@ install(TARGETS G_2_string_static G_2_string_shared
 install(
   FILES
     include/-2_string.h
+  DESTINATION
+    include
+)
+
+install(
+  FILES
     include/-2/string.h
     include/-2/string_types.h
     include/-2/string_macros.h
   DESTINATION
-    include
+    include/-2
 )
