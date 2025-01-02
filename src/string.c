@@ -6,16 +6,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "-0/debug_shortcut.h"
 #include "-0_types.h"
 
 #define G_THIS
 #include "-0_common.h"
 #undef G_THIS
 
-G_EXPORT g_0_err_t g_2_string(G_P const char *c_str, g_2_string_t *out) {
-  G_B;
-
+G_EXPORT g_0_err_t g_2_string(const char *c_str, g_2_string_t *out) {
   const size_t length = strlen(c_str);
   char *const result = (char *)malloc(length + 1);
   if (!result) {
@@ -26,10 +23,8 @@ G_EXPORT g_0_err_t g_2_string(G_P const char *c_str, g_2_string_t *out) {
   return false;
 }
 
-G_EXPORT g_0_err_t g_2_string_duplicate(G_P const g_2_string_t str,
+G_EXPORT g_0_err_t g_2_string_duplicate(const g_2_string_t str,
                                         g_2_string_t *out) {
-  G_B;
-
   char *const result = (char *)malloc(str.length + 1);
   if (!result) {
     return true;
@@ -39,8 +34,4 @@ G_EXPORT g_0_err_t g_2_string_duplicate(G_P const g_2_string_t str,
   return false;
 }
 
-G_EXPORT void g_2_string_dispose(G_P g_2_string_t *str) {
-  G_B;
-
-  free(str->c_str);
-}
+G_EXPORT void g_2_string_dispose(g_2_string_t *str) { free(str->c_str); }

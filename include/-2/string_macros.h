@@ -1,7 +1,6 @@
 #ifndef G_2_STRING_MACROS_H
 #define G_2_STRING_MACROS_H
 
-#include "-0_debug.h"
 #include "-0_option.h"
 
 #include "string_types.h"
