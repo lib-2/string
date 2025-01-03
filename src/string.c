@@ -3,7 +3,6 @@
 #undef G_EXPORT
 
 #ifdef __cplusplus
-extern "C" {
 #include <cstdlib>
 #include <cstring>
 #else
@@ -36,7 +35,3 @@ G_API g_err_t g_2_string_duplicate(const g_2_string_t str, g_2_string_t *out) {
 }
 
 G_API void g_2_string_dispose(g_2_string_t *str) { free(str->c_str); }
-
-#ifdef __cplusplus
-}
-#endif
