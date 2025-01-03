@@ -1,18 +1,20 @@
-#define G_THIS
+#define G_EXPORT
 #include "-2/string.h"
-#undef G_THIS
+#undef G_EXPORT
 
+#ifdef __cplusplus
+extern "C" {
+#include <cstdlib>
+#include <cstring>
+#else
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#endif
 
-#include "-0_types.h"
+#include "-0/common_export.h"
 
-#define G_THIS
-#include "-0_common.h"
-#undef G_THIS
-
-G_EXPORT g_0_err_t g_2_string(const char *c_str, g_2_string_t *out) {
+G_API g_err_t g_2_string(const char *c_str, g_2_string_t *out) {
   const size_t length = strlen(c_str);
   char *const result = (char *)malloc(length + 1);
   if (!result) {
@@ -23,8 +25,7 @@ G_EXPORT g_0_err_t g_2_string(const char *c_str, g_2_string_t *out) {
   return false;
 }
 
-G_EXPORT g_0_err_t g_2_string_duplicate(const g_2_string_t str,
-                                        g_2_string_t *out) {
+G_API g_err_t g_2_string_duplicate(const g_2_string_t str, g_2_string_t *out) {
   char *const result = (char *)malloc(str.length + 1);
   if (!result) {
     return true;
@@ -34,4 +35,8 @@ G_EXPORT g_0_err_t g_2_string_duplicate(const g_2_string_t str,
   return false;
 }
 
-G_EXPORT void g_2_string_dispose(g_2_string_t *str) { free(str->c_str); }
+G_API void g_2_string_dispose(g_2_string_t *str) { free(str->c_str); }
+
+#ifdef __cplusplus
+}
+#endif
