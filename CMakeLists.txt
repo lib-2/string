@@ -6,19 +6,19 @@ set(SOURCES
   src/string.c
 )
 
-add_library(G_2_string_static STATIC ${SOURCES})
-set_target_properties(G_2_string_static PROPERTIES
+add_library(G_2_string STATIC ${SOURCES})
+set_target_properties(G_2_string PROPERTIES
   OUTPUT_NAME "-2_string"
 )
 
-target_include_directories(G_2_string_static
+target_include_directories(G_2_string
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
   PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/external_include
 )
 
-install(TARGETS G_2_string_static
+install(TARGETS G_2_string
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
